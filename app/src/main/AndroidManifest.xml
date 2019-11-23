@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.taobao">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".register" ></activity>
+        <activity android:name=".main"></activity>
+        <activity android:name=".shop"></activity>
+        <activity android:name=".list"></activity>
+        <activity android:name=".edit_introduction"></activity>
+        <activity android:name=".edit_shop"></activity>
+        <activity android:name=".open_shop"></activity>
+        <activity android:name=".change_password"></activity>
+        <activity android:name=".commodity"></activity>
+        <activity android:name=".add_commodity"></activity>
+        <activity android:name=".delete_commodity"></activity>
+        <activity android:name=".buy"></activity>
+        <activity android:name=".edit_commodity"></activity>
+
+        <activity
+            android:name=".login"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+
+
+</manifest>
