@@ -12,12 +12,15 @@
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:text="此处显示商品名"
+          android:textColor="#000080"
           android:id="@+id/show_commodity_name"
           android:layout_gravity="center"/>
       <TextView
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
+          android:textColor="#000080"
+
           android:text="显示商品单价"
           android:id="@+id/show_price"
           android:layout_gravity="center"/>
@@ -25,6 +28,8 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
+          android:textColor="#000080"
+
           android:text="显示商品的数量"
           android:id="@+id/show_number"
           android:layout_gravity="center"/>
@@ -34,6 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="24sp"
         android:text="此处显示收货地址"
+        android:textColor="#000080"
+
         android:id="@+id/show_address"
         android:layout_marginBottom="5sp"/>
     <LinearLayout

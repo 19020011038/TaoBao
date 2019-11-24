@@ -12,7 +12,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="◀"
-            android:textSize="34sp"
+            android:textColor="#00bfff"
+            android:background="#"
+            android:textSize="44sp"
             android:id="@+id/back_open_shop_to_edit_shop"/>
         <TextView
             android:layout_width="0dp"

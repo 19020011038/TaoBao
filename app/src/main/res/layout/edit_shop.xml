@@ -12,15 +12,29 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="◀"
-            android:textSize="34sp"
+            android:textColor="#00bfff"
+            android:background="#"
+            android:textSize="44sp"
             android:id="@+id/back_edit_shop_to_shop"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="34sp"
+            android:textColor="#db7093"
             android:text="      编辑我的店铺"
             android:layout_weight="3.4"/>
     </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -30,7 +44,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:orientation="horizontal">
             <EditText
                 android:layout_width="0dp"
@@ -43,16 +57,26 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.7"
                 android:text="删除"
+                android:background="#"
+                android:textColor="#db7093"
                 android:textSize="24sp"
                 android:id="@+id/delete_shop"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"></LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:layout_gravity="center"
+            android:background="#"
+            android:textColor="#db7093"
             android:textSize="24sp"
             android:text="我要开店铺"
             android:id="@+id/jump_edit_shop_to_open_shop"/>

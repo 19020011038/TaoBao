@@ -25,17 +25,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="手机号"
-            android:textSize="34sp"
+            android:textColor="#db7093"
+            android:textSize="30sp"
             android:layout_gravity="center"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:hint="请输入您的手机号"
             android:id="@+id/tel"
             android:singleLine="true"
             android:digits="7894561230"
-            android:inputType="numberDecimal"/>
+            android:inputType="numberDecimal"
+            android:background="#"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,19 +49,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="密码"
-            android:textSize="34sp"
+            android:textColor="#db7093"
+
+            android:textSize="30sp"
             android:layout_gravity="center"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:hint="请输入您的密码"
             android:id="@+id/password"
             android:singleLine="true"
             android:digits="0123456789-+qwertyuioplkjhgfdsazxcvbnm-"
             android:maxLength="10"
+            android:background="#"
             android:inputType="textPassword"/>
     </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -67,15 +73,23 @@
         android:text="注册"
         android:id="@+id/register"
         android:layout_gravity="right"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="#db7093"
+        android:background="#00000000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/login"
-        android:text="登录"
+        android:text="      登录      "
         android:layout_gravity="center"
-        android:textSize="34sp"/>
+        android:textSize="30sp"
+        android:textColor="#db7093"
+        android:background="#"/>
 
 
 </LinearLayout>

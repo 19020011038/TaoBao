@@ -11,19 +11,30 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="left"
             android:text="◀"
-            android:textSize="24sp"
+            android:textColor="#00bfff"
+            android:background="#"
+            android:textSize="44sp"
             android:id="@+id/back_add_commodity_to_commodity"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3.4"
             android:text="此处显示店铺名"
+            android:textColor="#db7093"
+
             android:layout_gravity="center"
             android:id="@+id/text_show_shop_name_in_add"
             android:textSize="34sp"/>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,12 +63,19 @@
         android:digits="0123456789"
         android:inputType="numberDecimal"
         android:id="@+id/get_commodity_number"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:text="增加商品"
         android:textSize="24sp"
+        android:textColor="#db7093"
+
+        android:background="#"
         android:layout_gravity="center"
         android:id="@+id/add_commodity"/>
 

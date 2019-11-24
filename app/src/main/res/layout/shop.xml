@@ -16,7 +16,9 @@
            android:layout_height="match_parent"
            android:layout_weight="1"
            android:text="◀"
-           android:textSize="34sp"
+           android:textColor="#00bfff"
+           android:background="#"
+           android:textSize="44sp"
            android:id="@+id/back_shop_to_main"/>
        <TextView
            android:layout_width="0dp"

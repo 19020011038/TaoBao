@@ -12,17 +12,29 @@
            android:layout_height="match_parent"
            android:layout_weight="0.25"
            android:text="◀"
-           android:textSize="24sp"
-           android:layout_gravity="left"
+           android:textColor="#00bfff"
+           android:background="#"
+           android:textSize="44sp"
            android:id="@+id/back_edit_introduction_to_main"/>
        <TextView
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
            android:text=" 请编辑您的个人资料"
+           android:textColor="#db7093"
            android:layout_gravity="center"
            android:textSize="34sp"/>
    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></LinearLayout>
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
@@ -39,9 +51,12 @@
     <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
+        android:layout_weight="0.5"
         android:layout_gravity="center"
         android:text="修改"
+        android:textSize="24sp"
+        android:textColor="#db7093"
+        android:background="#"
         android:id="@+id/edit_nickname"/>
 </LinearLayout>
     <LinearLayout
@@ -59,8 +74,12 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
+            android:layout_weight="0.5"
+            android:textColor="#db7093"
+            android:background="#"
             android:layout_gravity="center"
+            android:textSize="24sp"
+
             android:text="修改"
             android:id="@+id/edit_intro"/>
     </LinearLayout>
@@ -80,10 +99,19 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
+            android:layout_weight="0.5"
             android:layout_gravity="center"
+            android:textColor="#db7093"
+            android:background="#"
+            android:textSize="24sp"
+
             android:text="修改"
             android:id="@+id/edit_location"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></LinearLayout>
 
 </LinearLayout>

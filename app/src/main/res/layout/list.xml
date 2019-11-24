@@ -12,12 +12,15 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="◀"
-            android:textSize="34sp"
+            android:textColor="#00bfff"
+            android:background="#"
+            android:textSize="44sp"
             android:id="@+id/back_list_to_main"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="            我的订单"
+            android:textColor="#db7093"
             android:layout_weight="4"
             android:textSize="34sp"
             android:layout_gravity="center"/>

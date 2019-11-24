@@ -9,6 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="商品名"
+        android:textColor="#000080"
+
         android:layout_gravity="center"/>
     <TextView
         android:id="@+id/commodity_price"
@@ -16,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="商品单价"
+        android:textColor="#000080"
         android:layout_gravity="center"/>
     <TextView
         android:id="@+id/commodity_number"
@@ -23,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_gravity="center"
+        android:textColor="#000080"
         android:text="商品数量"/>
 
     <Button
@@ -30,6 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="购买"
+        android:background="#"
+        android:textColor="#db7093"
         android:textSize="20sp"/>
 
 
