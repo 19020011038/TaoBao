@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class delete_commodity extends AppCompatActivity {
     private EditText get_delete_commodity_name;
+    private TextView show;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.delete_commodity);
@@ -22,6 +24,10 @@ public class delete_commodity extends AppCompatActivity {
         if (actionBar !=null){
             actionBar.hide();
         }
+        show = findViewById(R.id.show_shop_name_in_delete);
+        Bundle bundle = getIntent().getExtras();
+        String shop_name = bundle.getString("shop_name");
+        show.setText(shop_name);
         get_delete_commodity_name = findViewById(R.id.get_delete_commodity);
         Button button = (Button)findViewById(R.id.back_delete_commodity_to_commodity);
         button.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +44,7 @@ public class delete_commodity extends AppCompatActivity {
                 bundle1.putString("shop_name",shop_name);
                 intent.putExtras(bundle1);
                 startActivity(intent);
+                finish();
             }
         });
         Button button1 = (Button)findViewById(R.id.delete_commodity);
@@ -67,6 +74,7 @@ public class delete_commodity extends AppCompatActivity {
                         bundle1.putString("shop_name",shop_name);
                         intent.putExtras(bundle1);
                         startActivity(intent);
+                        finish();
 
                     } else {
                         Toast.makeText(delete_commodity.this,"没有找到相关商品！",Toast.LENGTH_SHORT).show();

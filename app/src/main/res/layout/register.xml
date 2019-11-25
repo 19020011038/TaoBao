@@ -11,46 +11,60 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="◀"
-            android:textColor="#00bfff"
-            android:background="#"
+            android:textColor="#ffffff"
+            android:background="@drawable/back"
             android:textSize="44sp"
             android:id="@+id/back"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:textSize="34sp"
-            android:textColor="#db7093"
+            android:layout_weight="3.4"
+            android:textSize="24sp"
+            android:textColor="#ff4500"
             android:text="请填写您的个人信息"
-            android:layout_gravity="center"/>
+            android:gravity="center"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="0.5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="1.5"
             android:layout_gravity="center"
             android:src="@drawable/logo" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="手机号"
-            android:textColor="#db7093"
-
-            android:textSize="34sp"
-            android:layout_gravity="center"
+            android:textColor="#ff4500"
+            android:textSize="24sp"
+            android:gravity="center"
             android:digits="7894561230"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -61,21 +75,32 @@
             android:digits="0123456789"
             android:maxLength="11"
             android:inputType="numberDecimal"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#db7093"
-
+            android:textColor="#ff4500"
             android:text="昵称"
-            android:textSize="34sp"
-            android:layout_gravity="center"/>
+            android:textSize="24sp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -84,43 +109,66 @@
             android:id="@+id/get_nickname"
             android:singleLine="true"
             android:maxLength="9"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     </LinearLayout>
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
     android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColor="#db7093"
-
+        android:textColor="#ff4500"
         android:text="简介"
-        android:textSize="34sp"
-        android:layout_gravity="center"/>
+        android:textSize="24sp"
+        android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     <EditText
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:hint="请输入您的简介"
+        android:singleLine="true"
         android:id="@+id/get_introduction"
         android:maxLength="30"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="密码"
-            android:textColor="#db7093"
-
-            android:textSize="34sp"
-            android:layout_gravity="center"/>
+            android:textColor="#ff4500"
+            android:textSize="24sp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -131,21 +179,32 @@
             android:digits="0123456789-+qwertyuioplkjhgfdsazxcvbnm-"
             android:maxLength="10"
             android:inputType="textPassword"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#db7093"
-
+            android:textColor="#ff4500"
             android:text="地址"
-            android:textSize="34sp"
-            android:layout_gravity="center"/>
+            android:textSize="24sp"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -153,17 +212,30 @@
             android:hint="请输入您的地址"
             android:id="@+id/get_location"
             android:maxLength="25"
+            android:singleLine="true"
             android:inputType="textPostalAddress"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.7"
         android:layout_gravity="center"
-        android:text="确认注册"
-        android:textColor="#db7093"
-        android:background="#"
+        android:text="      确认注册      "
+        android:textColor="#ffffff"
+        android:background="@drawable/background_button"
         android:textSize="34sp"
         android:id="@+id/register_sure" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"/>
 
 </LinearLayout>

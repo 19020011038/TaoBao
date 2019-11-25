@@ -5,39 +5,77 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.7"
         android:orientation="horizontal">
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="◀"
-            android:textColor="#00bfff"
-            android:background="#"
-            android:textSize="44sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/back"
+            android:textSize="24sp"
             android:id="@+id/back_open_shop_to_edit_shop"/>
         <TextView
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="3.4"
-            android:textSize="44sp"
-            android:text="        开店铺"/>
+            android:textSize="24sp"
+            android:textColor="#ff4500"
+            android:text="开店铺"
+            android:gravity="center"/>
     </LinearLayout>
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="0dp"
-       android:layout_weight="1"
-       android:hint="请输入您的店铺名："
-       android:id="@+id/get_open_shop_name"
-       android:maxLength="10"
-       android:singleLine="true"/>
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="开店铺"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请输入您的店铺名："
+            android:id="@+id/get_open_shop_name"
+            android:maxLength="10"
+            android:singleLine="true"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"></LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="          开店铺          "
         android:textSize="24sp"
+        android:background="@drawable/background_button"
+        android:textColor="#ffffff"
         android:layout_gravity="center"
         android:id="@+id/open_shop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"></LinearLayout>
+
 
 </LinearLayout>

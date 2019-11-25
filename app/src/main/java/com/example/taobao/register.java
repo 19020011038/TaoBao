@@ -39,6 +39,7 @@ public class register extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(register.this,login.class);
                 startActivity(intent1);
+                finish();
             }
         });
         Button button2 = (Button)findViewById(R.id.register_sure);
@@ -86,5 +87,6 @@ public class register extends AppCompatActivity {
         Toast.makeText(register.this, "注册成功" , Toast.LENGTH_LONG).show();
         Intent intent2 = new Intent(register.this,login.class);
         startActivity(intent2);
+        finish();
     }
 }

@@ -10,24 +10,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".register" ></activity>
-        <activity android:name=".main"></activity>
-        <activity android:name=".shop"></activity>
-        <activity android:name=".list"></activity>
-        <activity android:name=".edit_introduction"></activity>
-        <activity android:name=".edit_shop"></activity>
-        <activity android:name=".open_shop"></activity>
-        <activity android:name=".change_password"></activity>
-        <activity android:name=".commodity"></activity>
-        <activity android:name=".add_commodity"></activity>
-        <activity android:name=".delete_commodity"></activity>
-        <activity android:name=".buy"></activity>
-        <activity android:name=".edit_commodity"></activity>
+        <activity android:name=".register"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".main"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".shop"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".list"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".edit_introduction"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".edit_shop"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".open_shop"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".change_password"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".commodity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".add_commodity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".delete_commodity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".buy"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".edit_commodity"
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".login"
             android:label="@string/app_name"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

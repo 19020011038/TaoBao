@@ -44,6 +44,7 @@ public class commodity extends AppCompatActivity {
                 Intent intent = new Intent(commodity.this,shop.class);
                 intent.putExtra("id1",id);
                 startActivity(intent);
+                finish();
             }
         });
         Button jump_to_add = (Button)findViewById(R.id.jump_commodity_to_add);
@@ -71,6 +72,7 @@ public class commodity extends AppCompatActivity {
                         bundle2.putString("shop_name",shop_name);
                         intent.putExtras(bundle2);
                         startActivity(intent);
+                        finish();
                     }
                     else
                         Toast.makeText(commodity.this,"您不可以在别人的店铺内添加商品！",Toast.LENGTH_SHORT).show();
@@ -106,6 +108,7 @@ public class commodity extends AppCompatActivity {
                         bundle2.putString("shop_name",shop_name);
                         intent.putExtras(bundle2);
                         startActivity(intent);
+                        finish();
                     }
                     else
                         Toast.makeText(commodity.this,"您不可以在别人的店铺内删除商品！",Toast.LENGTH_SHORT).show();
@@ -140,6 +143,7 @@ public class commodity extends AppCompatActivity {
                         bundle2.putString("shop_name",shop_name);
                         intent.putExtras(bundle2);
                         startActivity(intent);
+                        finish();
                     }
                     else
                         Toast.makeText(commodity.this,"您不可以在别人的店铺内修改商品！",Toast.LENGTH_SHORT).show();

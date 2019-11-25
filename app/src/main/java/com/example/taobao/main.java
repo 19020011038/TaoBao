@@ -3,6 +3,7 @@ package com.example.taobao;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.ContentUris;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -28,6 +29,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -64,6 +67,22 @@ public class main extends AppCompatActivity implements View.OnClickListener {
         //拍照作为头像
         Button take_photo = (Button)findViewById(R.id.take_photo);
         picture = (ImageView)findViewById(R.id.picture);
+
+
+        Intent intent = getIntent();
+        String id_user = intent.getStringExtra("id_user");
+        MyDataBaseHelper dataBaseHelper = new MyDataBaseHelper(main.this);
+        SQLiteDatabase database = dataBaseHelper.getReadableDatabase();
+        Cursor cursor = database.query("user", new String[]{"picture", "id_user"}, "id_user=?", new String[]{id_user}, null, null, null);
+        if (cursor.moveToFirst()) {
+            byte[] blob = cursor.getBlob(cursor.getColumnIndex("picture"));//Ctrl+P
+            Bitmap bitmap = getBitmapFromByte(blob);
+            picture.setImageBitmap(bitmap);
+        }
+        cursor.close();//游标关闭!!!!
+        database.close();
+
+
         take_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,8 +159,18 @@ public class main extends AppCompatActivity implements View.OnClickListener {
             case TAKE_PHOTO:
                 if(resultCode == RESULT_OK){
                     try{
+                        Intent intent = getIntent();
+                        String id_user = intent.getStringExtra("id_user");
                         //将拍摄的图片显示出来
                         Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+                        Bitmap compress_bitmap = compressImage(bitmap);
+                        byte[] blob = getBitmapByte(compress_bitmap);
+                        MyDataBaseHelper dataBaseHelper = new MyDataBaseHelper(main.this);
+                        SQLiteDatabase database = dataBaseHelper.getReadableDatabase();
+                        ContentValues values = new ContentValues();
+                        values.put("picture", blob);//第一个"name" 是字段名字  第二个是对应字段的数据
+                        database.update("user", values, "id_user=?", new String[]{id_user});
+                        database.close();
                         picture.setImageBitmap(bitmap);
                     }catch (FileNotFoundException e){
                         e.printStackTrace();
@@ -193,7 +222,16 @@ public class main extends AppCompatActivity implements View.OnClickListener {
     }
     private void displayImage(String imagePath){
         if(imagePath != null){
+            Intent intent = getIntent();
+            String id_user = intent.getStringExtra("id_user");
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+            byte[] blob = getBitmapByte(bitmap);
+            MyDataBaseHelper dataBaseHelper = new MyDataBaseHelper(main.this);
+            SQLiteDatabase database = dataBaseHelper.getReadableDatabase();
+            ContentValues values = new ContentValues();
+            values.put("picture", blob);//第一个"name" 是字段名字  第二个是对应字段的数据
+            database.update("user", values, "id_user=?", new String[]{id_user});
+            database.close();
             picture.setImageBitmap(bitmap);
         }else {
             Toast.makeText(this,"获取图片失败！",Toast.LENGTH_SHORT).show();
@@ -263,7 +301,6 @@ public class main extends AppCompatActivity implements View.OnClickListener {
                 Intent jump3 = new Intent(main.this,edit_introduction.class);
                 Intent intent3 = getIntent();
                 String id3 = intent3.getStringExtra("id_user");
-
                 Bundle bundle3 = new Bundle();
                 bundle3.putString("id3",id3);
                 jump3.putExtras(bundle3);
@@ -287,4 +324,41 @@ public class main extends AppCompatActivity implements View.OnClickListener {
 
         }
     }
+    public byte[] getBitmapByte(Bitmap bitmap){   //将bitmap转化为byte[]类型也就是转化为二进制
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+        try {
+            out.flush();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return out.toByteArray();
+    }
+
+
+    public Bitmap getBitmapFromByte(byte[] temp){   //将二进制转化为bitmap
+        if(temp != null){
+            Bitmap bitmap = BitmapFactory.decodeByteArray(temp, 0, temp.length);
+            return bitmap;
+        }else{
+            return null;
+        }
+    }
+
+    public static Bitmap compressImage(Bitmap image) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.JPEG, 100, baos);//质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
+        int options = 100;
+        while (baos.toByteArray().length / 1024 > 100) {  //循环判断如果压缩后图片是否大于100kb,大于继续压缩
+            baos.reset();//重置baos即清空baos
+            image.compress(Bitmap.CompressFormat.JPEG, options, baos);//这里压缩options%，把压缩后的数据存放到baos中
+            options -= 10;//每次都减少10
+        }
+        ByteArrayInputStream isBm = new ByteArrayInputStream(baos.toByteArray());//把压缩后的数据baos存放到ByteArrayInputStream中
+        Bitmap bitmap = BitmapFactory.decodeStream(isBm, null, null);//把ByteArrayInputStream数据生成图片
+        return bitmap;
+    }
+
+
 }

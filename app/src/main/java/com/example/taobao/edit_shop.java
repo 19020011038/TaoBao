@@ -49,6 +49,7 @@ public class edit_shop extends AppCompatActivity {
                         Intent intent6 = new Intent(edit_shop.this,shop.class);
                         intent6.putExtra("id1",id);
                         startActivity(intent6);
+                        finish();
                     }
                     else
                         Toast.makeText(edit_shop.this,"您只能删除自己的店铺！",Toast.LENGTH_SHORT).show();

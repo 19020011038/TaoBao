@@ -5,39 +5,37 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="◀"
-            android:textColor="#00bfff"
-            android:background="#"
-            android:textSize="44sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/back"
+            android:textSize="24sp"
             android:id="@+id/back_commodity_to_shop"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3.4"
             android:text="此处显示店铺名"
-            android:layout_gravity="center"
-            android:textColor="#db7093"
+            android:gravity="center"
+            android:textColor="#ff4500"
             android:id="@+id/text_show_shop_name"
-            android:textSize="34sp"/>
+            android:textSize="24sp"/>
     </LinearLayout>
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:src="@drawable/logo" />
+        android:layout_weight="0.4"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5" />
+        android:layout_weight="4" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -46,36 +44,57 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:orientation="horizontal">
-        <Button
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="增加商品"
-            android:background="#"
-            android:textColor="#db7093"
-            android:textSize="24sp"
+            android:background="@drawable/background_button"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
             android:id="@+id/jump_commodity_to_add"/>
-        <Button
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="24sp"
+            android:textSize="14sp"
             android:text="删除商品"
-            android:background="#"
-            android:textColor="#db7093"
+            android:background="@drawable/background_button"
+            android:textColor="#ffffff"
             android:id="@+id/jump_commodity_to_delete"/>
-        <Button
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="修改商品"
-            android:background="#"
-            android:textColor="#db7093"
-            android:textSize="24sp"
+            android:background="@drawable/background_button"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
             android:id="@+id/jump_commodity_to_edit"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"/>
+
 
 
 </LinearLayout>

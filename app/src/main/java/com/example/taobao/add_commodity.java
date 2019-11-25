@@ -48,6 +48,7 @@ public class add_commodity extends AppCompatActivity {
                 bundle2.putString("shop_name",shop_name);
                 intent.putExtras(bundle2);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -101,6 +102,7 @@ public class add_commodity extends AppCompatActivity {
         bundle2.putString("shop_name",shop_name);
         intent.putExtras(bundle2);
         startActivity(intent);
+        finish();
 
     }
 }

@@ -60,6 +60,8 @@ public class login extends AppCompatActivity implements OnClickListener {
             case R.id.register:
                 Intent intent = new Intent(login.this,register.class);
                 startActivity(intent);
+                finish();
+
         }
     }
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -18,6 +19,7 @@ public class edit_commodity extends AppCompatActivity {
     private EditText get_edit_price;
     private EditText get_edit_number;
     private EditText get_name;
+    private TextView show;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,10 @@ public class edit_commodity extends AppCompatActivity {
         if (actionBar !=null){
             actionBar.hide();
         }
+        show = findViewById(R.id.text_show_shop_name_in_edit);
+        Bundle bundle = getIntent().getExtras();
+        String shop_name = bundle.getString("shop_name");
+        show.setText(shop_name);
         get_edit_commodity_name = findViewById(R.id.get_edit_commodity_name);
         get_edit_price = findViewById(R.id.get_edit_price);
         get_edit_number = findViewById(R.id.get_edit_number);
@@ -45,6 +51,7 @@ public class edit_commodity extends AppCompatActivity {
                 bundle2.putString("shop_name",shop_name);
                 intent.putExtras(bundle2);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -82,6 +89,7 @@ public class edit_commodity extends AppCompatActivity {
                         bundle2.putString("shop_name",shop_name);
                         intent.putExtras(bundle2);
                         startActivity(intent);
+                        finish();
                     }
                     } else {
                         Toast.makeText(edit_commodity.this,"该商品不存在！",Toast.LENGTH_SHORT).show();
@@ -126,6 +134,7 @@ public class edit_commodity extends AppCompatActivity {
                             bundle2.putString("shop_name",shop_name);
                             intent.putExtras(bundle2);
                             startActivity(intent);
+                            finish();
                         }
                     } else {
                         Toast.makeText(edit_commodity.this,"该商品不存在！",Toast.LENGTH_SHORT).show();
@@ -172,6 +181,7 @@ public class edit_commodity extends AppCompatActivity {
                             bundle2.putString("shop_name",shop_name);
                             intent.putExtras(bundle2);
                             startActivity(intent);
+                            finish();
                         }
                     } else {
                         Toast.makeText(edit_commodity.this,"该商品不存在！",Toast.LENGTH_SHORT).show();

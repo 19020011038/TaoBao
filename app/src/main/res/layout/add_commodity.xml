@@ -5,27 +5,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:orientation="horizontal">
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="◀"
-            android:textColor="#00bfff"
-            android:background="#"
-            android:textSize="44sp"
+            android:layout_weight="0.7"
+            android:textColor="#ffffff"
+            android:background="@drawable/back"
+            android:textSize="24sp"
             android:id="@+id/back_add_commodity_to_commodity"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3.4"
             android:text="此处显示店铺名"
-            android:textColor="#db7093"
+            android:textColor="#ff4500"
 
-            android:layout_gravity="center"
+            android:gravity="center"
             android:id="@+id/text_show_shop_name_in_add"
-            android:textSize="34sp"/>
+            android:textSize="24sp"/>
     </LinearLayout>
 
     <ImageView
@@ -34,49 +33,104 @@
         android:layout_weight="1.5"
         android:layout_gravity="center"
         android:src="@drawable/logo" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="请您输入商品名："
-        android:singleLine="true"
-        android:maxLength="10"
-        android:id="@+id/get_commodity_name"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="请您输入商品单价(以元为单位)："
-        android:singleLine="true"
-        android:maxLength="9"
-        android:inputType="numberDecimal"
-        android:digits="0.123456789"
-        android:id="@+id/get_commodity_price"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:hint="请您输入商品数量："
-        android:singleLine="true"
-        android:maxLength="10"
-        android:digits="0123456789"
-        android:inputType="numberDecimal"
-        android:id="@+id/get_commodity_number"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请您输入商品名："
+            android:singleLine="true"
+            android:maxLength="10"
+            android:id="@+id/get_commodity_name"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请您输入商品单价(以元为单位)："
+            android:singleLine="true"
+            android:maxLength="9"
+            android:inputType="numberDecimal"
+            android:digits="0.123456789"
+            android:id="@+id/get_commodity_price"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请您输入商品数量："
+            android:singleLine="true"
+            android:maxLength="10"
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:id="@+id/get_commodity_number"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="增加商品"
+        android:layout_weight="0.7"
+        android:text="        增加商品        "
         android:textSize="24sp"
-        android:textColor="#db7093"
+        android:textColor="#ffffff"
 
-        android:background="#"
+        android:background="@drawable/background_button"
         android:layout_gravity="center"
         android:id="@+id/add_commodity"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
 
 </LinearLayout>

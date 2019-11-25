@@ -41,6 +41,7 @@ public class buy extends AppCompatActivity {
                 bundle2.putString("shop_name",shop_name);
                 intent.putExtras(bundle2);
                 startActivity(intent);
+                finish();
             }
         });
         Button button1 = (Button)findViewById(R.id.buy_buy_buy);
@@ -93,6 +94,7 @@ public class buy extends AppCompatActivity {
                             bundle2.putString("shop_name",shop_name);
                             intent.putExtras(bundle1);
                             startActivity(intent);
+                            finish();
 
                         }
                     }

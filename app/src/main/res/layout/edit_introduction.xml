@@ -11,20 +11,24 @@
            android:layout_width="0dp"
            android:layout_height="match_parent"
            android:layout_weight="0.25"
-           android:text="◀"
-           android:textColor="#00bfff"
-           android:background="#"
-           android:textSize="44sp"
+           android:textColor="#ffffff"
+           android:background="@drawable/back"
+           android:textSize="24sp"
            android:id="@+id/back_edit_introduction_to_main"/>
        <TextView
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
            android:text=" 请编辑您的个人资料"
-           android:textColor="#db7093"
-           android:layout_gravity="center"
-           android:textSize="34sp"/>
+           android:textColor="#ff4500"
+           android:gravity="center"
+           android:textSize="24sp"/>
    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"></LinearLayout>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -40,7 +44,12 @@
     android:layout_height="0dp"
     android:layout_weight="1"
     android:orientation="horizontal">
-    <EditText
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <EditText
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -48,46 +57,75 @@
         android:singleLine="true"
         android:maxLength="9"
         android:id="@+id/get_edit_nickname"/>
-    <Button
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+        <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
+        android:layout_weight="0.3"
         android:layout_gravity="center"
         android:text="修改"
         android:textSize="24sp"
-        android:textColor="#db7093"
-        android:background="#"
+        android:textColor="#ffffff"
+        android:background="@drawable/background_button"
         android:id="@+id/edit_nickname"/>
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-        <EditText
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="请输入您要修改的简介："
-            android:maxLength="9"
-            android:id="@+id/get_edit_intro"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:textColor="#db7093"
-            android:background="#"
-            android:layout_gravity="center"
-            android:textSize="24sp"
+            android:layout_weight="0.2"/>
 
-            android:text="修改"
-            android:id="@+id/edit_intro"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:hint="请输入您要修改的简介："
+            android:maxLength="9"
+            android:id="@+id/get_edit_intro"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:textColor="#ffffff"
+            android:background="@drawable/background_button"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:text="修改"
+            android:id="@+id/edit_intro"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
         <EditText
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -96,22 +134,31 @@
             android:singleLine="true"
             android:maxLength="9"
             android:id="@+id/get_edit_location"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
+            android:layout_weight="0.3"
             android:layout_gravity="center"
-            android:textColor="#db7093"
-            android:background="#"
+            android:textColor="#ffffff"
+            android:background="@drawable/background_button"
             android:textSize="24sp"
-
             android:text="修改"
             android:id="@+id/edit_location"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"/>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"></LinearLayout>
+        android:layout_weight="2"></LinearLayout>
 
 </LinearLayout>
